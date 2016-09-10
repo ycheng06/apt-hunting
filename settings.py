@@ -1,9 +1,9 @@
-SLACK_CHANNEL = "#housing"
+SLACK_CHANNEL = "#apt"
 MAX_PRICE = 4000
-SLEEP_INTERVAL = 10
+SLEEP_INTERVAL = 20 * 60
 
 BOXES = {
-	"mission_creek": [
+	"near_caltrain": [
 		[37.771571, -122.391601],
 		[37.778507, -122.400484]
 	],
