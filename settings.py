@@ -1,4 +1,7 @@
+import os
+
 SLACK_CHANNEL = "#apt"
+
 MAX_PRICE = 4000
 SLEEP_INTERVAL = 20 * 60
 

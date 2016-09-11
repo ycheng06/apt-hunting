@@ -44,7 +44,7 @@ def scrape():
 
 		if listing is None:
 			# If there is no string identifying which neighborhood the result is from, skip it.
-			if result["geotag"] is None:
+			if result["where"] is None:
 				continue
 
 			area_found = False
@@ -58,12 +58,12 @@ def scrape():
 						area = a
 						area_found = True
 
-			# location = result["where"]
-			# if location is not None:
-			# 	for hood in settings.NEIGHBORHOODS:
-			# 		if hood in location.lower():
-			# 			area = hood
-			# 			area_found = True
+			location = result["where"]
+			if area_found == False and location is not None:
+				for hood in settings.NEIGHBORHOODS:
+					if hood in location.lower():
+						area = hood
+						area_found = True
 
 			if area_found:
 				# Create listing object
